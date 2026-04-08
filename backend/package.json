@@ -1,0 +1,33 @@
+{
+  "name": "eventsphere-event-ticketing-backend",
+  "version": "1.0.0",
+  "description": "Hyper-Local Event Ticketing Platform - Backend",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "event",
+    "ticketing",
+    "hyper-local"
+  ],
+  "author": "EventSphere Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "mongoose": "^7.5.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.0",
+    "qrcode": "^1.5.3",
+    "cors": "^2.8.5",
+    "validator": "^13.11.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0"
+  }
+}
