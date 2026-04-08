@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Pages
+import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Events from './pages/Events';
@@ -41,7 +42,7 @@ const AppContent = () => {
         <Header />
         <main className="flex-1">
           <Routes>
-            <Route path="/" element={<Navigate to="/events" replace />} />
+            <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/events" element={<Events />} />
