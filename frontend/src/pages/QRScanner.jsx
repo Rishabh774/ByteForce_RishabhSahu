@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Html5QrcodeScanner } from 'html5-qrcode';
+import { Html5QrcodeScanner } from 'html5-qrcode/esm';
 import { bookingAPI, eventAPI } from '../utils/apiCalls';
 import Toast from '../components/Toast';
 import { ArrowLeft, Check, X } from 'lucide-react';

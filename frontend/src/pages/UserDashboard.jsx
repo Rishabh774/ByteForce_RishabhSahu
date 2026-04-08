@@ -55,7 +55,7 @@ const UserDashboard = () => {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-gray-600 text-sm font-medium mb-2">Upcoming Events</h3>
             <p className="text-3xl font-bold">
-              {bookings.filter(b => new Date(b.event.startDate) > new Date()).length}
+              {bookings.filter(b => b.event && new Date(b.event.startDate) > new Date()).length}
             </p>
           </div>
 
@@ -74,7 +74,7 @@ const UserDashboard = () => {
 
           {bookings.length > 0 ? (
             <div className="divide-y">
-              {bookings.map(booking => (
+              {bookings.filter(b => b.event).map(booking => (
                 <div key={booking._id} className="p-6 hover:bg-light transition">
                   <div className="flex justify-between items-start mb-4">
                     <div>
@@ -86,7 +86,7 @@ const UserDashboard = () => {
                         </div>
                         <div className="flex items-center gap-2">
                           <MapPin size={16} className="text-primary" />
-                          {booking.event.venue.city}
+                          {booking.event.venue?.city || 'Location TBA'}
                         </div>
                         <div className="flex items-center gap-2">
                           <Ticket size={16} className="text-primary" />
